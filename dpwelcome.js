@@ -1,9 +1,25 @@
-
+require('dotenv').config()
 
 const Discord = require('discord.js');
-const config = require('./config.json');
-const token = config.token;
+//const config = require('./config.json');
+//const token = config.token;
 const client = new Discord.Client();
+ 
+// // START ENV INSTRUCTIONS
+/* CREATE a blank file, name it .env
+* add the following lines
+* .env file needs to contain your token
+*Line 1> TEST_DISCORD_TOKEN=ToKeNCoDeForYouRBOTfromTHEDisocrdDEVsiteHERE
+*Line 2> PREFIX=.prefix
+*
+*(replace ".prefix" withsomething that makese sense for other commands)
+* Example of a prefix would be "!!c" (without quotes)
+*/ // END ENV explination 
+
+
+
+
+
 
 
 
@@ -23,6 +39,7 @@ client.on('ready', () =>
 client.on("guildMemberAdd", (member) => 
 {
     let guild = member.guild; // finds the guild (ID)
+    let guildname = guild.name;
     const role = guild.roles.cache.find(role => role.name === 'newjoin');
     const memberDisplayName = member.displayName;
     member.roles.add(role) .catch(error => guild.systemChannel.send(`Sorry, an error occured. on new member join. Please notify <!${config.ownerID}`));
@@ -31,4 +48,4 @@ client.on("guildMemberAdd", (member) =>
 
 
 
-client.login(token);
+client.login(process.env.TEST_DISCORD_TOKEN);

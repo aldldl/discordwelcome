@@ -1,5 +1,5 @@
 {
-  "name": "dpbot",
+  "name": "discordwelcomebot",
   "version": "1.0.0",
   "description": "Welcome New Users with a newjoin role",
   "main": "dpwelcome.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aldldl/DarkPoetry.comBot.git"
+    "url": "git+https://github.com/aldldl/discordwelcome.git"
   },
   "keywords": [
     "discord",
@@ -22,7 +22,11 @@
   "author": "ALoImage",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/aldldl/DarkPoetry.comBot/issues"
+    "url": "https://github.com/aldldl/discordwelcomeissues"
   },
-  "homepage": "https://github.com/aldldl/DarkPoetry.comBot#readme"
+  "homepage": "https://github.com/aldldl/discordwelcome#readme",
+  "dependencies": {
+    "discord.js": "^12.4.0",
+    "dotenv": "^8.2.0"
+  }
 }
